@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-SaepDb1Application<saep_db1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.saep2025.saep_db1.SaepDb1Application",
+            "projectName": "saep_db1",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

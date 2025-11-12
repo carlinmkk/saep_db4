@@ -1,0 +1,119 @@
+/* ===== Fundo e layout geral ===== */
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f8f9fa;
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Container principal ===== */
+.form-container {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 20px;
+  padding: 40px 50px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 25px rgba(0, 212, 255, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.form-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(0, 212, 255, 0.4);
+}
+
+/* ===== Título ===== */
+h2 {
+  text-align: center;
+  color: #00d4ff;
+  font-weight: 700;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+/* ===== Inputs ===== */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+input:focus {
+  border-color: #00d4ff;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.4);
+}
+
+/* ===== Botão "Salvar" ===== */
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #00d4ff, #0097a7);
+  color: #0f2027;
+  border: none;
+  border-radius: 50px; /* 🔵 mais arredondado */
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+button:hover {
+  background: linear-gradient(90deg, #03e1ff, #00acc1);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.6);
+  transform: scale(1.03);
+}
+
+/* ===== Link "Voltar" ===== */
+a.voltar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #00d4ff;
+  text-decoration: none;
+  border: 1px solid rgba(0, 212, 255, 0.4);
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+a.voltar:hover {
+  background-color: #00d4ff;
+  color: #0f2027;
+  box-shadow: 0 0 12px rgba(0, 212, 255, 0.6);
+}
+
+/* ===== Responsividade ===== */
+@media (max-width: 480px) {
+  .form-container {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+}
