@@ -1,0 +1,123 @@
+/* ===== Fundo e layout geral ===== */
+body {
+    /* sobrescreve o padding-top do layout global apenas nesta página */
+    padding-top: 0;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f8f9fa;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* ===== Container principal (fixa largura e centraliza) ===== */
+.form-container {
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 212, 255, 0.25);
+    border-radius: 15px;
+    padding: 22px 26px;
+    width: 100%;
+    max-width: 400px;           /* largura compacta e centralizada */
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.25);
+    margin: 0 auto;             /* garante centralização horizontal */
+    height: 500px;
+}
+
+/* ===== Título ===== */
+h2 {
+    color: #00d4ff;
+    font-weight: 600;
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+/* ===== Inputs ===== */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #f8f9fa;
+    font-size: 13px;
+    outline: none;
+    transition: 0.18s;
+    box-sizing: border-box;
+    height: 40px;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+input:focus {
+    border-color: #00d4ff;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 5px rgba(0, 212, 255, 0.28);
+}
+
+/* ===== Botões (Salvar e Voltar) ===== */
+/* colocamos o estilo base para botões e links que ficarão idênticos */
+.form-buttons button,
+.form-buttons a.voltar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;               /* largura fixa igual para os dois */
+    padding: 8px 12px;
+    background: linear-gradient(90deg, #00d4ff, #0097a7);
+    color: #0f2027;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.4px;
+    text-decoration: none;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    box-sizing: border-box;
+}
+
+/* hover idêntico */
+.form-buttons button:hover,
+.form-buttons a.voltar:hover {
+    background: linear-gradient(90deg, #03e1ff, #00acc1);
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.45);
+    transform: translateY(-2px);
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+    height: 50px;
+}
+
+a.voltar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== Responsivo ===== */
+@media (max-width: 420px) {
+    .form-container {
+        padding: 16px 18px;
+        max-width: 92%;
+    }
+
+    .form-buttons button,
+    .form-buttons a.voltar {
+        width: 100px;
+        font-size: 12px;
+        padding: 7px 10px;
+    }
+}

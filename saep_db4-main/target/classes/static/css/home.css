@@ -1,0 +1,103 @@
+/* Fundo com gradiente moderno e texto claro */
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container centralizado e com efeito de vidro */
+.login-container {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 40px 50px;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+}
+
+/* Título */
+.login-container h2 {
+    margin-bottom: 25px;
+    color: #00d4ff;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Campos de input */
+.login-container input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #f8f9fa;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.login-container input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 6px #00d4ff;
+}
+
+/* Botão de login */
+.login-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #00d4ff;
+    border: none;
+    border-radius: 8px;
+    color: #0f2027;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #03bde6;
+    transform: translateY(-1px);
+}
+
+/* Mensagens de erro e sucesso */
+.msg {
+    margin-top: 15px;
+    color: #ff6666;
+    font-weight: 500;
+}
+
+.msg-sucesso {
+    margin-top: 15px;
+    color: #00ff99;
+    font-weight: 500;
+}
+
+/* Link "Cadastre-se" */
+.btn-link {
+    color: #00d4ff;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 5px;
+    transition: all 0.3s;
+}
+
+.btn-link:hover {
+    color: #3f78c2;
+    text-decoration: underline;
+}
+
+/* Texto de rodapé */
+.text-center {
+    margin-top: 15px;
+    color: #ccc;
+    font-size: 0.9em;
+}
