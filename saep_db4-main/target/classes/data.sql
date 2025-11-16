@@ -12,8 +12,8 @@ VALUES ('Colaborador', 'colab@saep.com',
         '$2a$10$0omgADneSOBADv2v0OTXk.PHuUwiIjT12HoTalmHzZstKUW93LHJ2');
 
 INSERT INTO usuario (nome, email, senha)
-VALUES ('Karize', 'karize@saep.com', 
-        '$2a$10$fNoNFpC2OkJlSM.bteD.sOHC9126CS8Wdr7BZdjRhb8NMn1YRZSAG');
+VALUES ('Carlos', 'carlos@saep.com',
+        '$2a$10$MkBEAliUoaFmwBlW1JJIVOqmpWQbYv/gx9vNcLDyMdUcvjLxjklZG');
 
 -- TIPOS PADRÃO
 INSERT INTO tipo (descricao) VALUES

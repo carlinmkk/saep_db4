@@ -20,10 +20,8 @@ public class Usuario {
 
     private String senha;
 
-    // Novo campo para armazenar a função/perfil do usuário
-    private String role = "Usuário"; // valor padrão
-
-    // Opcional: construtor para conveniência
+    private String role = "Usuário";
+    
     public Usuario() {
     }
 
