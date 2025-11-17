@@ -3,17 +3,17 @@
 -- ========================================
 
 -- USUÁRIO PADRÃO (senha: adm)
-INSERT INTO usuario (nome, email, senha)
+INSERT INTO usuario (nome, email, senha,role)
 VALUES ('Administrador', 'admin@saep.com',
-        '$2a$10$0omgADneSOBADv2v0OTXk.PHuUwiIjT12HoTalmHzZstKUW93LHJ2');
+        '$2a$10$0omgADneSOBADv2v0OTXk.PHuUwiIjT12HoTalmHzZstKUW93LHJ2', 'Admin');
 
-INSERT INTO usuario (nome, email, senha)
+INSERT INTO usuario (nome, email, senha,role)
 VALUES ('Colaborador', 'colab@saep.com',
-        '$2a$10$0omgADneSOBADv2v0OTXk.PHuUwiIjT12HoTalmHzZstKUW93LHJ2');
+        '$2a$10$0omgADneSOBADv2v0OTXk.PHuUwiIjT12HoTalmHzZstKUW93LHJ2', 'Colaborador');
 
-INSERT INTO usuario (nome, email, senha)
+INSERT INTO usuario (nome, email, senha,role)
 VALUES ('Carlos', 'carlos@saep.com',
-        '$2a$10$MkBEAliUoaFmwBlW1JJIVOqmpWQbYv/gx9vNcLDyMdUcvjLxjklZG');
+        '$2a$10$MkBEAliUoaFmwBlW1JJIVOqmpWQbYv/gx9vNcLDyMdUcvjLxjklZG', 'Usuario');
 
 -- TIPOS PADRÃO
 INSERT INTO tipo (descricao) VALUES

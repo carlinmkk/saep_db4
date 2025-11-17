@@ -132,7 +132,7 @@
             <label for="role" class="form-label">Função</label>
             <select id="role" th:field="*{role}" class="form-select" required>
                 <option value="">Selecione a função</option>
-                <option value="Usuário" th:selected="${usuario.role == 'Usuário'}">Usuário</option>
+                <option value="Usuário" th:selected="${usuario.role == 'Usuário'}">Usuario</option>
                 <option value="Colaborador" th:selected="${usuario.role == 'Colaborador'}">Colaborador</option>
                 <option value="Admin" th:selected="${usuario.role == 'Admin'}">Admin</option>
             </select>

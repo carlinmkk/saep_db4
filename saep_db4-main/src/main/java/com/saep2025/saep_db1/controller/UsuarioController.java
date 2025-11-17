@@ -13,14 +13,13 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/usuarios")
 public class UsuarioController {
 
-    private UsuarioRepository usuarioRepository;
+    private final UsuarioRepository usuarioRepository;
+    private final PasswordEncoder passwordEncoder;
 
     public UsuarioController(UsuarioRepository usuarioRepository, PasswordEncoder passwordEncoder) {
         this.usuarioRepository = usuarioRepository;
         this.passwordEncoder = passwordEncoder;
     }
-
-    private PasswordEncoder passwordEncoder;
 
     @GetMapping
     public String listar(Model model) {
@@ -28,17 +27,34 @@ public class UsuarioController {
         return "usuario/lista";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @GetMapping("/novo")
     public String novo(Model model) {
         model.addAttribute("usuario", new Usuario());
         return "usuario/form";
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/salvar")
     public String salvar(@ModelAttribute Usuario usuario) {
-        usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
+
+        // Se for edição e senha vier vazia, não altera a senha
+        if (usuario.getId() != null) {
+            Usuario original = usuarioRepository.findById(usuario.getId()).orElse(null);
+            if (original != null && (usuario.getSenha() == null || usuario.getSenha().isBlank())) {
+                usuario.setSenha(original.getSenha());
+            } else {
+                usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
+            }
+        } else {
+            // Novo usuário → criptografar senha normalmente
+            usuario.setSenha(passwordEncoder.encode(usuario.getSenha()));
+        }
+
         usuarioRepository.save(usuario);
-        return "redirect:/login?cadastroSucesso=true";
+
+        // ⬅⬅⬅ AQUI ESTÁ A CORREÇÃO
+        return "redirect:/usuarios";
     }
 
     @PreAuthorize("hasRole('ADMIN')")
